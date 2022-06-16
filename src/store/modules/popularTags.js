@@ -37,7 +37,6 @@ const actions = {
       context.commit(mutationTypes.getPopularTagsStart)
       const tags = await popularTagsApi.getPopularTags()
       context.commit(mutationTypes.getPopularTagsSuccess, tags)
-      console.log(tags);
     } catch (error) {
       context.commit(mutationTypes.getPopularTags)
     }
